@@ -1,10 +1,11 @@
+import { jslib } from '@nx-bug-3/jslib';
 import './app.element.scss';
 
 export class AppElement extends HTMLElement {
   public static observedAttributes = [];
 
   connectedCallback() {
-    const title = 'app';
+    const title = jslib();
     this.innerHTML = `
     <div class="wrapper">
       <div class="container">
